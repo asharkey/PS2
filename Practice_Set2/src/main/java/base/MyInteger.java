@@ -12,10 +12,6 @@ public class MyInteger {
 		return iValue;
 	}
 
-	public void setiValue(int iValue) {
-		this.iValue = iValue;
-	}
-
 	public boolean isEven() {
 		if ((iValue % 2) == 0) {
 			return true;
@@ -79,18 +75,10 @@ public class MyInteger {
 	}
 
 	public boolean equals(int Value) {
-		if (Value == this.iValue) {
-			return true;
-		} else {
-			return false;
-		}
+		return (Value == this.iValue);
 	}
 
 	public boolean equals(MyInteger Value) {
-		if (Value.getiValue() == this.iValue) {
-			return true;
-		} else {
-			return false;
-		}
+		return (Value.getiValue() == this.iValue);
 	}
 }
