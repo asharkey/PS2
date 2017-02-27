@@ -75,10 +75,10 @@ public class MyInteger {
 	}
 
 	public boolean equals(int Value) {
-		return (Value == this.iValue);
+		return (Value == iValue);
 	}
 
 	public boolean equals(MyInteger Value) {
-		return (Value.getiValue() == this.iValue);
+		return (Value.getiValue() == iValue);
 	}
 }

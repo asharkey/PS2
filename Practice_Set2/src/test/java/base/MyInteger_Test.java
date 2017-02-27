@@ -54,7 +54,7 @@ public class MyInteger_Test {
 	public void TestisOdd() {
 		assertTrue(MyInteger.isOdd(num3));
 		assertFalse(MyInteger.isOdd(num4));
-		assertFalse(new4.isOdd(new4));
+		assertFalse(new3.isOdd(new4));
 		assertTrue(new3.isOdd(new3));
 	}
 
@@ -68,6 +68,9 @@ public class MyInteger_Test {
 		assertTrue(new11.isPrime(new11));
 		assertFalse(new12.isPrime(new12));
 		assertFalse(new20.isPrime(new20));
+		boolean b = MyInteger.isPrime(new4);
+		assertEquals(new4.isPrime(),b);
+		
 	}
 
 	@Test
@@ -75,5 +78,6 @@ public class MyInteger_Test {
 		assertTrue(new12.equals(num12));
 		assertFalse(new12.equals(new5));
 		assertFalse(new12.equals(num11));
+		assertEquals(new5.equals(new5),true);
 	}
 }
