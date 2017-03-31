@@ -2,12 +2,15 @@ package base;
 
 import static org.junit.Assert.*;
 
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+//JUnit Tests
+//----------------------------------------------------------------------------------------
 public class MyInteger_Test {
 	int num1 = 1;
 	int num2 = 2;
@@ -25,23 +28,26 @@ public class MyInteger_Test {
 	MyInteger new11 = new MyInteger(num11);
 	MyInteger new12 = new MyInteger(num12);
 	MyInteger new20 = new MyInteger(num20);
-
+//--------------------------------------------------------------------------------------------
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+	}
+	
+	@Before
+	public void setUp() throws Exception {
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 	}
 
-	@Before
-	public void setUp() throws Exception {
-	}
-
 	@After
 	public void tearDown() throws Exception {
 	}
 
+//------------------------------------------------------------------------------------------
+	
 	@Test
 	public void TestisEven() {
 		assertTrue(MyInteger.isEven(num2));
@@ -56,6 +62,13 @@ public class MyInteger_Test {
 		assertFalse(MyInteger.isOdd(num4));
 		assertFalse(new3.isOdd(new4));
 		assertTrue(new3.isOdd(new3));
+	}
+	@Test
+	public void Testequals() {
+		assertTrue(new12.equals(num12));
+		assertFalse(new12.equals(new5));
+		assertFalse(new12.equals(num11));
+		assertEquals(new5.equals(new5),true);
 	}
 
 	@Test
@@ -72,12 +85,5 @@ public class MyInteger_Test {
 		assertEquals(new4.isPrime(),b);
 		
 	}
-
-	@Test
-	public void Testequals() {
-		assertTrue(new12.equals(num12));
-		assertFalse(new12.equals(new5));
-		assertFalse(new12.equals(num11));
-		assertEquals(new5.equals(new5),true);
-	}
 }
+//--------------------------------------------------------------------------------------
